@@ -5,5 +5,6 @@ locals {
     cost    = "shared"
     creator = "terraform"
     git     = var.git
+    Name    = var.git
   }
 }
