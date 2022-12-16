@@ -2,7 +2,7 @@
 # https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners
 # https://github.com/actions/runner/blob/main/docs/start/envlinux.md#install-net-core-3x-linux-dependencies
 apt-get update -y
-apt-get install -y curl mysql-server liblttng-ust0 libkrb5-3 zlib1g libssl1.1 libicu60
+apt-get install -y curl mysql-client
 mysqldump --version
 
 # install actions runner and connect to github
