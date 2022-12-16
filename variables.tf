@@ -22,6 +22,12 @@ variable "ami_filter_owners" {
   default     = ["099720109477"] # Canonical
 }
 
+variable "associate_public_ip_address" {
+  description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#associate_public_ip_address"
+  type        = bool
+  default     = false
+}
+
 variable "disable_api_termination" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#disable_api_termination"
   type        = bool
