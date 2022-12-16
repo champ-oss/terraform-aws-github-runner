@@ -24,6 +24,7 @@ resource "aws_instance" "this" {
   disable_api_termination     = var.disable_api_termination
   ebs_optimized               = var.ebs_optimized
   hibernation                 = var.hibernation
+  iam_instance_profile        = aws_iam_instance_profile.this.name
   monitoring                  = var.monitoring
   user_data_replace_on_change = var.user_data_replace_on_change
 
@@ -37,4 +38,10 @@ resource "aws_instance" "this" {
     volume_size           = var.root_block_device_volume_size
     delete_on_termination = true
   }
+}
+
+resource "aws_iam_instance_profile" "this" {
+  name_prefix = var.git
+  tags        = merge(local.tags, var.tags)
+  role        = aws_iam_role.this.name
 }
