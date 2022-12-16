@@ -3,6 +3,7 @@
 # https://github.com/actions/runner/blob/main/docs/start/envlinux.md#install-net-core-3x-linux-dependencies
 
 # install dependencies
+export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
 apt-get install -y curl mysql-client awscli
 mysqldump --version
