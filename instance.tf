@@ -25,6 +25,7 @@ resource "aws_instance" "this" {
   ebs_optimized               = var.ebs_optimized
   hibernation                 = var.hibernation
   monitoring                  = var.monitoring
+  user_data_replace_on_change = var.user_data_replace_on_change
 
   user_data = templatefile("${path.module}/user_data.tpl", {
     actions_runner_linux_download_url = var.actions_runner_linux_download_url

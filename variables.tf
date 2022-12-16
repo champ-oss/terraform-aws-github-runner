@@ -90,6 +90,12 @@ variable "tags" {
   default     = {}
 }
 
+variable "user_data_replace_on_change" {
+  description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance#user_data_replace_on_change"
+  type        = bool
+  default     = true
+}
+
 variable "vpc_id" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group#vpc_id"
   type        = string
