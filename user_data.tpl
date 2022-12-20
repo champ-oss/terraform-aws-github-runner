@@ -5,7 +5,7 @@
 # install dependencies
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -y
-apt-get install -y curl mysql-client awscli pv
+apt-get install -y curl mysql-client awscli pv mysql-utilities
 mysqldump --version
 
 # install actions runner and connect to github

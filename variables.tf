@@ -7,7 +7,7 @@ variable "actions_runner_linux_download_url" {
 variable "ami_filter_name" {
   description = "https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/ami#filter"
   type        = list(string)
-  default     = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  default     = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
 }
 
 variable "ami_filter_virtualization_type" {
