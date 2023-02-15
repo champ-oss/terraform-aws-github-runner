@@ -38,7 +38,7 @@ resource "aws_instance" "this" {
     volume_size           = var.root_block_device_volume_size
     delete_on_termination = true
   }
-  
+
   lifecycle {
     ignore_changes = [
       ami
